@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Java script Practice</title>
+</head>
+<body>
+    <h1>if else </h1>
+    
+<script>
+   /* // truthy -
+    if(1.25){
+        console.log('truthy');
+    }
+    if(-1.25){
+        console.log('truthy');
+    }
+    if(1/2){
+        console.log('truthy');
+    }
+    if(5){
+        console.log('truthy');
+    } */
+    
+    // Note: !0 (truthy- because not equal to symbol add)
+    /* // Falsy -0, ' ', nan, undefined, null
+    // falsy - empty String (' ')
+   if(''){
+    console.log('true');
+    }else{
+    console.log('Empty String')
+   }
+    
+    // falsy - 0
+    if(0){
+        console.log('true');  
+    }else{
+        console.log('zero-0');
+        
+    }
+    //falsy - Not a Number(NAN)
+    console.log('string'/5);
+    
+    // falsy -undefined
+    let mac;
+    console.log(mac); */
+
+    // Shortcut od if and else Statement
+    // 1. Ternary Operator
+    const result = 5 ? 'ternary-truethy' : 'falsy' ;
+    console.log(result);
+
+    const results = 0 ? 'truthy' : '0-falsy' ;
+    console.log(results);
+
+    // Gurd operator && 
+    // shortcut of if statement using && operator
+    const a = true && console.log('gurd hello');
+
+    
+    // short circuit evaluation in && operator
+    const c = 0 && console.log('falsy');
+    const num = 0 && 'zero';
+    console.log(num);
+    
+    
+    
+    
+    
+    
+    
+</script>
+</body>
+</html>

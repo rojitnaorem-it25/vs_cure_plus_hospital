@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+  <style>
+    body{
+      background-color: rgb(61, 66, 66);
+    }
+  </style>
+</head>
+<body>
+    
+    <script>
+      const object = 
+      { // create object
+        name : 'rojit',
+        age : 23,
+      }
+      console.log(object); //{name: 'rojit', age: 23}
+      
+      // Create - C
+      object.phone = 897400; // Create -only one Object
+      console.log(object); //{name: 'rojit', age: 23, phone: 897400}
+
+      // multiple Object create
+      object.add='bpr',
+      object.gmail = 'rjt@gmail.com',
+      object.po = 'bpr';
+           
+      console.log(object); //{name: 'rojit', age: 23, phone: 897400,
+                        //add: 'bpr', gmail: 'rjt@gmail.com',po : 'bpr' }
+      
+      // add function 
+      object.method = function function1() 
+      {
+        console.log('hello');
+      }
+      console.log(object);
+      
+      // Read-R 
+      console.log(object); //whole
+      console.log(object.name); // rojit (using Dot notation /methods)
+      console.log(object[name]); // undifined
+      console.log(object["name"]); // rojit (using braket method)
+
+      // update (edit)- U
+      object.name = 'Naorem Rojit Singh'; // String to String update
+      object.name = 23; // String to Number(let,const)
+      console.log(object);
+      
+      // Delete - D
+      delete object.phone; // deleted from under object block -- phone : 897400
+      console.log(object);
+
+      delete object.name,
+      delete object.age,
+      delete object.gmail;
+          console.log(object);
+          
+      // do not delete whole object 
+      // delete object;
+      // console.log(object);
+      
+           
+      
+      
+   
+    </script>
+</body>
+</html>

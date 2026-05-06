@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<body class="m-5 bg-gray-500">
+
+    <!-- 1 -->
+    <!-- <button class=" px-1 rounded-md bg-slate-200"
+    onclick="
+    cartQuality++
+    console.log(`Student Id : ${cart}${cartQuality}`);
+    ">
+        Add to cart
+    </button> -->
+
+    <!-- 2 --> 
+    <!-- <button class=" px-1 rounded-md bg-slate-200"
+    onclick="
+    console.log(`fruit name is : ${Name}`);
+    ">
+        Add to cart
+    </button> -->
+
+    <!-- 3 -->
+    <!-- <button class=" px-1 rounded-md bg-slate-200"
+    onclick="
+    console.log(` Cost of food    : $${totalFood} \n Tax             : $${afterTax} \n Total Incl. tax : $${totalFood}
+    `);
+    ">
+        Add to cart
+    </button> -->
+
+    <!-- 4 -->
+     <!-- <div>
+        <button  class=" px-2 rounded-md bg-slate-200"
+        onclick="
+        calculations++;
+        console.log(`${calculations}`);
+        ">
+            1
+        </button>
+        <button class=" px-2 rounded-md bg-slate-200"
+        onclick="
+        calculations = 2;
+        console.log(`${calculations}`);
+        ">
+            2
+        </button>
+        <button class=" px-2 rounded-md bg-slate-200"
+        onclick="
+        calculations = 3;
+        console.log(`${calculations}`);
+        
+        ">
+            3
+        </button>
+        <button class=" px-2 rounded-md bg-slate-200"
+        onclick="
+        calculations = 1+2+3;
+        console.log(`${calculations}`);
+        
+        ">
+        
+            +
+        </button>
+        <button class=" px-2 rounded-md bg-slate-200">
+            =
+        </button>
+     </div> -->
+    <!-- 5 -->
+     <div class="space-x-5 ml-5">
+        <div class="flex justify-center gap-10 bg-gray-300 w-70 rounded-md mb-10">
+            <p>Rock</p>
+            <p>Paper</p>
+            <p>Scissors</p>
+        </div>
+
+        <!-- Rock Part -->
+        <button class="bg-white/10 px-2 rounded-md text-white/80 border-1 border-gray-400"
+        onclick="
+        playGame('Rock');
+        ">
+            Rock
+        </button>
+
+
+        <!-- Paper Part -->
+        <button class="bg-white/10 px-2 rounded-md text-white/80 border-1 border-gray-400"
+        onclick="
+        playGame('paper');
+        ">
+            Paper
+        </button>
+
+        <!-- scissors part -->
+         <button class="bg-white/10 px-2 rounded-md text-white/80 border-1 border-gray-400"
+        onclick="
+        playGame('scissors');
+        ">
+            Scissors
+        </button>
+     </div>
+
+
+
+
+    <script>
+        // 1
+        // let cart = 'RODEV-';
+        // let cartQuality = 0;
+
+        // 2
+        // let Name = 'Apple';
+
+        // 3
+        // let coffee = 5;
+        // let bagels = 2*3;
+        // let soup = 9;
+        // let tax = 0.1 ;
+        // let foods = coffee + bagels + soup;
+        // let afterTax = foods * tax;
+        // let totalFood = foods +afterTax;
+       
+        //4 parameter and default value for a parameter
+       
+        // function funcntion1(parameter1 , parameter2 = constant)
+        // {
+        //     console.log(parameter2);
+            
+        //     console.log(parameter1 * parameter2);
+        //     console.log(parameter1);
+        // }
+        // funcntion1(10, 20)
+        
+
+//5. rock paper scissor using function 
+
+        function playGame(playerMove)
+        { 
+            const computerMove = pickComputerMove();
+        
+            let result = ''; 
+
+            // player Scissors
+        if(playerMove === 'scissors')
+        {
+            if(computerMove === 'Rock')
+            {
+                result = 'You loose';
+            }
+
+            else if(computerMove === 'paper')
+            {
+                result = 'You Win !!!';
+            }
+
+            else if(computerMove === 'scissors')
+            {
+                result = 'Tie'
+            }
+        }
+
+        // player Rock
+        else if(playerMove === 'Rock')
+        {
+            if(computerMove === 'Rock')
+            {
+                result = 'Tie';
+            }
+
+            else if(computerMove === 'paper')
+            {
+                result = 'You loose';
+            }
+
+            else if(computerMove === 'scissors')
+            {
+                result = 'You Win !!!!'
+            }
+        }
+
+            // player Paper
+            else if(playerMove === 'paper')
+        {
+            if(computerMove === 'Rock')
+            {
+                result = 'You win !!!';
+            }
+
+            else if(computerMove === 'paper')
+            {
+                result = 'Tie';
+            }
+
+            else if(computerMove === 'scissors')
+            {
+                result = 'You loose'
+            }
+        }
+
+
+            alert(`You picked ${playerMove} \n Computer picked ${computerMove} \n \n ${result}`);
+        }
+        
+
+
+        // range of math.random common
+        
+        function pickComputerMove()
+        {
+            const randomMath = Math.random();
+            
+            if(randomMath >=0 && randomMath < 1/3)
+            {
+                computerMove = 'Rock'; 
+            } 
+
+            else if(randomMath >= 1/3 && randomMath < 2/3)
+            {
+                computerMove = 'paper';
+            } 
+            
+            else if(randomMath >= 2/3 && randomMath < 1)
+            {
+                computerMove = 'scissors';
+            }
+
+            return computerMove;
+        }
+        
+    </script>
+        
+</body>
+</html>
