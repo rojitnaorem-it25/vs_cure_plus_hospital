@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cure Plus Hospital Header</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Glassmorphism & custom transitions */
+    .glass-effect {
+      background: rgba(42, 41, 41, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="bg-[#8f8e8e] min-h-screen">
+
+  <header class="sticky top-0 z-50 w-full">
+    <!-- Top Decorative Screws -->
+    <div class="flex justify-between px-4 md:px-20 lg:px-30 py-1">
+      <i class="fa-solid fa-plus bg-[#575555] border-2 border-[#0b0b0bc5] rounded-full text-[10px] md:text-[15px] text-[#141414]"></i>
+      <i class="fa-solid fa-plus bg-[#575555] border-2 border-[#0b0b0bc5] rounded-full text-[10px] md:text-[15px] text-[#141414]"></i>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="mx-2 md:mx-4 glass-effect border-b border-white/10 shadow-2xl rounded-t-lg">
+      <div class="max-w-7xl mx-auto px-4 md:px-10 lg:px-20 py-3 flex justify-between items-center">
+        
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img class="w-12 md:w-16 lg:w-20 p-1 bg-white rounded-full shadow-lg" src="photo/logo_cp1.png" alt="Cure Plus Logo">
+          <span class="lg:hidden text-[#aca7a7] font-serif font-bold tracking-tighter text-sm md:text-base">CURE PLUS</span>
+        </div>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex gap-8 text-[#aca7a7] font-semibold tracking-widest font-serif">
+          <a class="hover:text-white border-b border-transparent hover:border-white transition duration-300 pb-1" href="#">Home</a>
+          <a class="hover:text-white border-b border-transparent hover:border-white transition duration-300 pb-1" href="#">Doctor</a>
+          <a class="hover:text-white border-b border-transparent hover:border-white transition duration-300 pb-1" href="#">Service</a>
+          <a class="hover:text-white border-b border-transparent hover:border-white transition duration-300 pb-1" href="contact_us.jsp">Contact</a>
+          <a class="hover:text-white border-b border-transparent hover:border-white transition duration-300 pb-1" href="about.jsp">About</a>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="lg:hidden">
+          <button id="menu-btn" class="text-[#aca7a7] text-2xl focus:outline-none">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-[#2a2929] border-t border-white/10">
+        <div class="flex flex-col p-4 space-y-4 text-[#aca7a7] font-serif tracking-widest text-center">
+          <a class="py-2 hover:bg-[#545252] rounded transition" href="#">Home</a>
+          <a class="py-2 hover:bg-[#545252] rounded transition" href="#">Doctor</a>
+          <a class="py-2 hover:bg-[#545252] rounded transition" href="#">Service</a>
+          <a class="py-2 hover:bg-[#545252] rounded transition" href="contact_us.jsp">Contact</a>
+          <a class="py-2 hover:bg-[#545252] rounded transition" href="about.jsp">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hospital Branding Strip -->
+    <div class="mx-2 md:mx-10 px-4 py-1 flex justify-between items-center bg-gradient-to-t from-[#100f0f] via-[#f1af08d4] to-[#0a0909] shadow-lg border-x border-[#333] rounded-xl">
+      <div class="flex flex-col md:flex-row md:items-baseline md:gap-2">
+        <h1 class="text-sm md:text-xl text-[#313030] font-serif font-bold tracking-wider uppercase">
+          CURE PLUS Hospital
+        </h1>
+        <span class="text-[10px] md:text-xs text-[#222] font-bold italic">Since 1953</span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <p class="hidden md:block text-[10px] font-bold text-[#1c1b1b] uppercase tracking-widest">Medical Portal</p>
+        <button class="w-8 h-8 md:w-10 md:h-10 rounded-full flex justify-center items-center bg-gradient-to-t from-[#2d2d28] via-[#e4a402d4] to-[#2e2c2c] hover:from-white hover:to-gray-300 shadow-md transition duration-500 border border-black/20">
+          <i class="fa-solid fa-power-off text-[#f10909] text-sm md:text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Bottom Decorative Screws -->
+    <div class="flex justify-between px-6 md:px-15 py-1">
+      <i class="fa-solid fa-plus bg-[#575555] border-2 border-[#0b0b0bc5] rounded-full text-[10px] md:text-[15px] text-[#141414]"></i>
+      <i class="fa-solid fa-plus bg-[#575555] border-2 border-[#0b0b0bc5] rounded-full text-[10px] md:text-[15px] text-[#141414]"></i>
+    </div>
+  </header>
+
+  <!-- JavaScript for Hamburger Menu -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      // Toggle between bars and X icon
+      const icon = menuBtn.querySelector('i');
+      icon.classList.toggle('fa-bars-staggered');
+      icon.classList.toggle('fa-xmark');
+    });
+  </script>
+
+</body>
+</html>

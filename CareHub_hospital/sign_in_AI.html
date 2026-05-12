@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Cure Plus Hospital - Sign In</title>
+</head>
+<body class="bg-[#f0f4f8] min-h-screen font-sans">
+
+    <!-- Sticky Header -->
+    <header class="bg-gradient-to-b from-[#151515] via-[#ef8205] to-[#0b0b0b] text-center py-2 mx-4 md:mx-16 lg:mx-30 rounded-xl sticky top-0 z-50 shadow-2xl">
+        <div class="flex justify-center items-center gap-3">
+             
+             <span class="text-3xl font-serif font-bold tracking-widest text-black">Sign in - Cure Plus Hospital</span>
+        </div>
+        
+    </header>
+
+    <!-- Visual Spacer -->
+    <div class="max-w-6xl mx-auto px-4 md:px-20 ">
+        <div class="bg-[#061029] backdrop-blur-md py-4"></div>
+        
+        <!-- Main Content Section -->
+        <section class="bg-[#312f2f] backdrop-blur-lg grid grid-cols-1 lg:grid-cols-2 border-x border-white shadow-2xl overflow-hidden">
+            
+            <!-- Left Side: Hospital Branding & Illustration -->
+            <div class="p-10 flex flex-col justify-center bg-gradient-to-br from-[#617c96] to-[#d1dae6]">
+                <div class="space-y-6">
+                    <p class="bg-white/80 py-2 px-6 rounded-full text-sm tracking-widest font-bold text-[#0f172a] border-b-2 border-[#22d3ee] inline-block shadow-sm">
+                        Welcome Back
+                    </p>
+                    
+                    <h2 class="text-3xl font-serif font-bold text-slate-800 leading-tight">
+                        Caring for your health with <span class="text-cyan-600">excellence</span> and compassion.
+                    </h2>
+
+                    <p class="text-slate-600 leading-relaxed tracking-wide">
+                        Sign in to manage appointments, access medical records, and connect with experienced doctors instantly.
+                    </p>
+
+                    <!-- Trust Badges -->
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-slate-100 hover:translate-y-[-2px] transition-transform">
+                            <i class="fa-solid fa-user-doctor text-cyan-500"></i>
+                            <span class="text-xs font-bold tracking-tighter text-slate-700">Qualified Doctors</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm border border-slate-100 hover:translate-y-[-2px] transition-transform">
+                            <i class="fa-solid fa-truck-medical text-cyan-500"></i>
+                            <span class="text-xs font-bold tracking-tighter text-slate-700">24/7 Emergency</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Sign-in (Apple/Google) -->
+                    <div class="grid grid-cols-2 gap-4 mt-10">
+                        <a class="flex gap-3 justify-center items-center text-white bg-slate-900 py-3 rounded-xl hover:bg-slate-800 transition shadow-lg" href="#">
+                            <i class="fa-brands fa-apple text-xl"></i>
+                            <span class="text-xs font-bold tracking-widest">APPLE ID</span>
+                        </a>
+                        <a class="flex gap-3 justify-center items-center text-slate-700 bg-white py-3 rounded-xl border border-slate-200 hover:bg-slate-50 transition shadow-sm" href="#">
+                            <i class="fa-brands fa-google text-xl text-red-500"></i>
+                            <span class="text-xs font-bold tracking-widest uppercase">Google</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Sign In Form -->
+            <div class="p-10 flex flex-col justify-center bg-[#36425c]">
+                <div class="max-w-md mx-auto w-full">
+                    <p class="text-slate-400 text-center py-2 tracking-[0.4em] font-bold uppercase mb-8 border-b border-slate-100">
+                        Account Access
+                    </p>
+                    
+                    <form class="space-y-5" action="#">
+                        <!-- Email Input -->
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold tracking-widest text-slate-500 uppercase ml-1" for="email">Email or Mobile</label>
+                            <div class="relative">
+                                <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                                <input class="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 transition-all" 
+                                       type="text" id="email" placeholder="email@hospital.com" required>
+                            </div>
+                        </div>
+
+                        <!-- Password Input -->
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold tracking-widest text-slate-500 uppercase ml-1" for="password">Password</label>
+                            <div class="relative">
+                                <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                                <input class="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:ring-2 focus:ring-cyan-500/20 focus:border-cyan-500 transition-all" 
+                                       type="password" id="password" placeholder="••••••••" required>
+                            </div>
+                        </div>
+
+                        <!-- Forgot & Links -->
+                        <div class="flex justify-between items-center px-1">
+                            <div class="flex items-center gap-2">
+                                <input type="checkbox" id="remember" class="accent-cyan-500">
+                                <label for="remember" class="text-xs text-slate-500 italic">Remember me</label>
+                            </div>
+                            <div class="flex gap-4 text-xs font-bold">
+                                <a class="text-slate-400 hover:text-cyan-600 transition" href="#">Forgot Password?</a>
+                                <a class="text-cyan-600 hover:underline" href="#">Sign Up</a>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-[#0f172a] via-[#334155] to-[#0f172a] py-4 rounded-xl text-white font-bold tracking-[0.3em] uppercase shadow-lg shadow-cyan-900/10 hover:shadow-cyan-900/20 hover:scale-[1.01] transition-all duration-300">
+                            Sign In
+                        </button>
+                    </form>
+
+                    <!-- Security Info -->
+                    <div class="mt-10 flex justify-center gap-6 opacity-40 grayscale hover:grayscale-0 transition">
+                        <div class="flex items-center gap-1"><i class="fa-solid fa-shield-halved text-xs"></i><span class="text-[10px] font-bold">SECURE</span></div>
+                        <div class="flex items-center gap-1"><i class="fa-solid fa-lock text-xs"></i><span class="text-[10px] font-bold">HIPAA SAFE</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Contact Bar -->
+        <footer class="bg-[#0f172a] py-8 rounded-b-3xl mb-135 px-10 border-t border-white/5">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+                <div class="flex items-center justify-center md:justify-start gap-3 text-slate-400 hover:text-cyan-400 transition">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="text-xs tracking-widest uppercase font-bold">support@cphospital.in</span>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-3 text-slate-400 hover:text-cyan-400 transition">
+                    <i class="fa-solid fa-phone"></i>
+                    <span class="text-xs tracking-widest uppercase font-bold">+91 98765 43210</span>
+                </div>
+                <div class="flex items-center justify-center md:justify-start gap-3 text-slate-400 hover:text-cyan-400 transition">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="text-xs tracking-widest uppercase font-bold">Bishnupur, Manipur</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>

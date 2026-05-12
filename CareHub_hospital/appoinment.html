@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        /* Custom scrollbar for that premium dark look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1d1e1d; }
+        ::-webkit-scrollbar-thumb { background: #e6a80d; border-radius: 5px;}
+    </style>
+</head>
+<body class="bg-[#8f8e8e] font-sans antialiased">
+
+     <p class="mt- bg-gradient-to-b from-[#191919] via-[#ef8205] to-[#171717] text-center py-1 mx-5 rounded-xl sticky top-0
+        ">
+          <span class="text-3xl font-serif font-semibold tracking-widest
+          ">Cure Plus Hospital</span>
+
+    <!-- HERO SECTION -->
+    <section class="mx-15 mb-3 bg-[#1d1c1c] overflow-hidden border-b-4 border-[#383737]">
+        <div class="flex flex-col lg:flex-row justify-between">
+            <!-- Left Content -->
+            <div class="p-8 lg:p-16 lg:w-[60%]">
+                <h1 class="text-white text-[38px] md:text-[50px] font-serif font-semibold tracking-widest leading-tight mb-6">
+                    <span class="bg-gradient-to-r from-[#fbfdfa] to-[#888787] text-transparent inline bg-clip-text">Book Your</span><br>
+                    <span class="bg-gradient-to-l from-[#ebeee9] to-[#e6a80d] text-transparent inline bg-clip-text">Appointment at</span><br>
+                    <span class="bg-gradient-to-r from-[#e7f1de] to-[#888787] text-transparent inline bg-clip-text">Cure Plus Hospital</span>
+                </h1>
+                
+                <p class="text-[#e6a80d] tracking-[0.2em] font-medium mb-2">SINCE 1953</p>
+                <p class="text-justify text-[#848383] leading-relaxed mb-8 max-w-xl">
+                    <span class="text-white tracking-widest font-semibold uppercase text-sm">Trusted Healthcare:</span> 
+                    Experienced and qualified doctors. Choose your doctor, select your preferred date and time, and confirm your appointment easily.
+                </p>
+
+                <div class="flex flex-wrap gap-6 items-start">
+                    <!-- CTA Buttons -->
+                    <div class="space-y-6">
+                        <a href="#booking-form" class="inline-block text-white tracking-widest font-serif px-10 py-3 border-r-2 border-b-2 border-[#383737] rounded-lg bg-gradient-to-b from-[#e6a80d] to-[#050505] hover:scale-105 transition-transform">
+                            Book Appointment
+                        </a>
+                        <div class="text-[#f6f4f4] tracking-widest space-y-1">
+                            <p class="text-sm flex items-center gap-2 hover:text-[#e6a80d] transition"><span>🕘</span> Mon – Sat: 8:00 AM – 8:00 PM</p>
+                            <p class="text-sm flex items-center gap-2 text-red-400"><span>🚑</span> 24×7 Emergency Support</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <p class="text-[#cbc5c5] tracking-wider text-sm italic">
+                            🔹 Verified Specialists<br>
+                            🔹 Instant Confirmation
+                        </p>
+                        <a href="tel:+919876543210" class="inline-block text-[#edefee] tracking-widest font-serif px-8 py-2 bg-gradient-to-r from-[#5d5a5a] to-[#161615] border border-[#383737] rounded-lg hover:bg-slate-700 transition">
+                            Contact Hospital
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image (Styled like your reference) -->
+            <div class="lg:w-[45%] bg-[#252424] flex items-center justify-center rounded-lg">
+                <img src="/CareHub_hospital/photo/doctor_patient.jpg" alt="Doctor" class="max-h-[500px] object-contain grayscale hover:grayscale-0 transition duration-700">
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN FORM & INFO SECTION -->
+    <div class="mx-15 mb-10 grid grid-cols-1 lg:grid-cols-12 gap-3">
+        
+        <!-- APPOINTMENT FORM -->
+        <main id="booking-form" class="lg:col-span-8 bg-[#1d1c1c] p-8 rounded-sm border-b-4 border-[#383737]">
+            <form class="space-y-12">
+                
+                <!-- 1. Personal Info -->
+                <section>
+                    <h2 class="text-[#e6a80d] tracking-[0.3em] font-serif text-xl border-b border-[#383737] pb-2 mb-6 uppercase">1. Personal Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="md:col-span-2">
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Full Name</label>
+                            <input type="text" class="w-full bg-[#252424] border border-[#383737] p-3 text-white focus:border-[#e6a80d] outline-none transition">
+                        </div>
+                        <div>
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Gender</label>
+                            <select class="w-full bg-[#252424] border border-[#383737] p-3 text-white outline-none">
+                                <option>Male</option><option>Female</option><option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Date of Birth / Age</label>
+                            <input type="text" placeholder="DD/MM/YYYY" class="w-full bg-[#252424] border border-[#383737] p-3 text-white outline-none">
+                        </div>
+                        <div>
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Mobile Number</label>
+                            <input type="tel" class="w-full bg-[#252424] border border-[#383737] p-3 text-white outline-none">
+                        </div>
+                        <div>
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Email Address</label>
+                            <input type="email" class="w-full bg-[#252424] border border-[#383737] p-3 text-white outline-none">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Appointment Info -->
+                <section>
+                    <h2 class="text-[#e6a80d] tracking-[0.3em] font-serif text-xl border-b border-[#383737] pb-2 mb-6 uppercase">2. Appointment Details</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Department</label>
+                            <select class="w-full bg-[#252424] border border-[#383737] p-3 text-white outline-none">
+                                <option>Cardiology</option><option>Neurology</option><option>Orthopedics</option><option>Pediatrics</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Doctor</label>
+                            <select class="w-full bg-[#252424] border border-[#383737] p-3 text-white outline-none">
+                                <option>Dr. Konjengbam Thoiba Meitei</option><option>Dr. S. Sharma</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Appointment Date</label>
+                            <input type="date" class="w-full bg-[#252424] border border-[#383737] p-3 text-white outline-none invert">
+                        </div>
+                        <div>
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Visit Type</label>
+                            <div class="flex gap-4 pt-2">
+                                <label class="text-white text-sm"><input type="radio" name="vtype" class="accent-[#e6a80d]"> New Patient</label>
+                                <label class="text-white text-sm"><input type="radio" name="vtype" class="accent-[#e6a80d]"> Follow-up</label>
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="text-[#848383] text-xs uppercase tracking-widest mb-2 block">Symptoms / Health Problem</label>
+                            <textarea rows="3" class="w-full bg-[#252424] border border-[#383737] p-3 text-white outline-none"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3. Medical & 4. Payment -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <section>
+                        <h2 class="text-[#e6a80d] tracking-[0.3em] font-serif text-sm border-b border-[#383737] pb-2 mb-4 uppercase">3. Medical Details</h2>
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Existing Diseases (Diabetes, BP...)" class="w-full bg-[#252424] border border-[#383737] p-2 text-sm text-white outline-none">
+                            <input type="text" placeholder="Current Medications" class="w-full bg-[#252424] border border-[#383737] p-2 text-sm text-white outline-none">
+                        </div>
+                    </section>
+                    <section>
+                        <h2 class="text-[#e6a80d] tracking-[0.3em] font-serif text-sm border-b border-[#383737] pb-2 mb-4 uppercase">4. Payment</h2>
+                        <div class="bg-[#252424] p-4 rounded border border-[#383737]">
+                            <p class="text-white text-sm mb-2">Consultation Fee: <span class="text-[#e6a80d] font-bold tracking-widest">₹500</span></p>
+                            <select class="w-full bg-[#1d1c1c] border border-[#383737] p-2 text-xs text-white outline-none">
+                                <option>Cash</option><option>UPI</option><option>Debit/Credit Card</option>
+                            </select>
+                        </div>
+                    </section>
+                </div>
+
+                <button class="w-full py-4 text-white tracking-[0.5em] font-serif uppercase text-lg border-r-4 border-b-4 border-[#383737] rounded-sm bg-gradient-to-r from-[#e6a80d] to-[#815f07] hover:from-[#f0b51d] transition shadow-2xl">
+                    Confirm Appointment
+                </button>
+            </form>
+        </main>
+
+        <!-- RIGHT SIDE INFORMATION -->
+        <aside class="lg:col-span-4 space-y-3">
+            
+            <!-- Hospital Card -->
+            <div class="bg-[#1d1c1c] p-6 border-b-4 border-[#e6a80d]">
+                <h3 class="text-white font-serif text-2xl tracking-widest mb-1">Cure Plus Hospital</h3>
+                <p class="text-[#e6a80d] text-xs tracking-[.2em] mb-4">ESTABLISHED 1953</p>
+                
+                <div class="space-y-4 text-sm text-[#cbc5c5] tracking-wider">
+                    <p><span class="text-[#848383] block text-[10px] uppercase">Founder</span> Konjengbam Thoiba Meitei</p>
+                    <p><span class="text-[#848383] block text-[10px] uppercase">Location</span> Bishnupur, Manipur</p>
+                    <p><span class="text-[#848383] block text-[10px] uppercase">Email</span> support@cphospital.in</p>
+                    <p class="text-white font-bold">📞 +91 98765 43210</p>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="bg-[#252424] p-6 border-b-4 border-[#383737]">
+                <h4 class="text-white font-serif tracking-widest mb-4 border-l-4 border-[#e6a80d] pl-3">Extra Features</h4>
+                <ul class="text-[#848383] text-sm space-y-3 tracking-widest">
+                    <li class="hover:text-white transition cursor-default">🔹 Doctor Availability Status</li>
+                    <li class="hover:text-white transition cursor-default">🔹 SMS & Email Notification</li>
+                    <li class="hover:text-white transition cursor-default">🔹 Online Consultation Option</li>
+                    <li class="hover:text-white transition cursor-default">🔹 Ambulance Booking</li>
+                    <li class="hover:text-white transition cursor-default">🔹 Patient ID Generation</li>
+                </ul>
+            </div>
+
+            <!-- Trust Section -->
+            <div class="bg-[#1d1c1c] p-6 border-b-4 border-[#383737]">
+                <h4 class="text-white font-serif tracking-widest mb-4">Why Choose Us?</h4>
+                <div class="grid grid-cols-1 gap-2">
+                    <span class="text-[11px] bg-[#252424] p-2 text-[#cbc5c5] border border-[#383737] rounded">Modern Medical Equipment</span>
+                    <span class="text-[11px] bg-[#252424] p-2 text-[#cbc5c5] border border-[#383737] rounded">Experienced Specialists</span>
+                    <span class="text-[11px] bg-[#252424] p-2 text-[#cbc5c5] border border-[#383737] rounded">Clean & Safe Environment</span>
+                    <span class="text-[11px] bg-[#252424] p-2 text-[#cbc5c5] border border-[#383737] rounded">Affordable Treatment</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mx-6 my-10 py-6 border-t border-[#383737] text-center">
+        <p class="text-[#1d1c1c] font-serif tracking-[0.5em] text-sm uppercase">&copy; Cure Plus Hospital 1953-2026</p>
+    </footer>
+
+    
+
+</body>
+</html>
